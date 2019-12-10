@@ -1,0 +1,8 @@
+{
+	"fixtureId": 10,
+	"userId": 394,
+	"stocks": [
+		{"cskuId": 275, "count": 12}, 
+		{"cskuId": 476, "count": 20}
+	]
+}

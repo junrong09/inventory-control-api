@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 //const bodyParser = require('body-parser');
 const knex = require('knex');
@@ -15,14 +16,14 @@ const db = knex({
 });
 
 //app.use(bodyParser.json());
+app.use(cors());
 app.use(express.json());
 
 app.post('/submission', (req, res) => {
 	console.log(req.body);
 	const {fixtureId, userId, stocks} = req.body;
 
-	//db.select('*').from('fixtures').then(data => console.log(data));
-	db.insert({fixture_id: fixtureId, employee_id: userId, datetime: new Date().toISOString()}).into('submissions').returning('id').then(id => insertStocktakes(stocks, id[0], db));
+	db.insert({fixture_id: fixtureId, employee_id: userId, datetime: new Date().toISOString()}).into('submissions').returning('id').then(ids => insertStocktakes(stocks, ids[0], db));
 	res.send('Successful!');
 });
 

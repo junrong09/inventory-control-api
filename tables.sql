@@ -10,21 +10,21 @@ DROP TABLE fixtures;
 DROP TABLE employees;
 
 CREATE TABLE fixtures (
-    id INTEGER NOT NULL,
+    id VARCHAR NOT NULL,
     description text NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE employees (
-    id INTEGER NOT NULL,
+    id VARCHAR NOT NULL,
     name VARCHAR,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE submissions(
     id SERIAL NOT NULL,
-    fixture_id INTEGER REFERENCES fixtures(id) NOT NULL,
-    employee_id INTEGER REFERENCES employees(id) NOT NULL,
+    fixture_id VARCHAR REFERENCES fixtures(id) NOT NULL,
+    employee_id VARCHAR REFERENCES employees(id) NOT NULL,
     dateTime timestamp NOT NULL,
     PRIMARY KEY (id)
 );

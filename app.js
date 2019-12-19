@@ -28,6 +28,10 @@ app.post('/submission', (req, res) => {
 	res.send('Successful!');
 });
 
+app.get('/test', (req, res) => {
+  res.send("Connection successful!");
+});
+
 const insertStocktakes = (stocks, submissionId, db) => {
 	let stockRows = [];
 	stocks.forEach(element => {

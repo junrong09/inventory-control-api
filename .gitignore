@@ -95,5 +95,13 @@ public/
 # DynamoDB Local files
 .dynamodb/
 
+# AWS
+.elasticbeanstalk/
+
 # End of https://www.gitignore.io/api/node
 
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

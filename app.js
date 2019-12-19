@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -8,9 +9,9 @@ const port = 3001;
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'junrong',
-    password : '',
+    host : process.env.RDS_HOSTNAME,
+    user : process.env.RDS_USERNAME,
+    password : process.env.RDS_PASSWORD,
     database : 'inventory-control'
   }
 });

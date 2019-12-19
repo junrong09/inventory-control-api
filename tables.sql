@@ -32,7 +32,9 @@ CREATE TABLE submissions(
 CREATE TABLE stocktakes (
     id INTEGER NOT NULL,
     submission_id INTEGER REFERENCES submissions(id) NOT NULL,
-    csku_id VARCHAR NOT NULL,
+    csku VARCHAR NULL,
+    rskuid VARCHAR NULL,
+    upc VARCHAR NOT NULL,
     count INTEGER NOT NULL,
     PRIMARY KEY (id, submission_id)
 );

@@ -35,7 +35,7 @@ app.get('/test', (req, res) => {
 const insertStocktakes = (stocks, submissionId, db) => {
 	let stockRows = [];
 	stocks.forEach(element => {
-		stockRows.push({id: stockRows.length + 1, submission_id: submissionId, csku_id: element.cskuId, count: element.count});
+		stockRows.push({id: stockRows.length + 1, submission_id: submissionId, upc: element.upc, count: element.count});
 	});
 	console.log(stockRows);
 	db.insert(stockRows).into('stocktakes').then(console.log);

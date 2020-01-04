@@ -1,0 +1,11 @@
+GET:
+Response - 200
+{
+  [
+    {
+      "fixtureId": "A10",
+      "count": 2,
+      "description": "Shelf 13 at wine section"
+    }
+  ]
+}

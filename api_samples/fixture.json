@@ -1,0 +1,22 @@
+POST:
+Request
+[
+  {
+    "fixtureId": "A12",
+    "description": "Shelf 10 at wine section"
+  },
+  {
+    "fixtureId": "A13",
+    "description": "Shelf 11 at wine section"
+  }
+]
+
+Response - 200
+{
+  "fixtureRecv": 2,
+  "fixtureRegistered": 8,
+  "fixturesFailed": [
+    "A10",
+    "A11"
+  ]
+}

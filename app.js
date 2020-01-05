@@ -27,9 +27,10 @@ const db = knex({
 app.use(cors());
 app.use(express.json());
 
-// Submission API (POST)
+// APIs (POST)
 app.post('/submission', (req, res) => submission.post(req, res, db));
 app.get('/status', (req, res) => status.get(req, res, db));
+app.post('/fixtures', (req, res) => fixture.post(req, res, db));
 
 // Test API (GET) 
 app.get('/test', (req, res) => {

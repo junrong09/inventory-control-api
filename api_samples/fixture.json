@@ -13,10 +13,11 @@ Request
 
 Response - 200
 {
-  "fixtureRecv": 2,
-  "fixtureRegistered": 8,
-  "fixturesFailed": [
+  "failed": [
     "A10",
     "A11"
-  ]
+  ],
+  "inserted": [
+    "A09"
+  ]   
 }
